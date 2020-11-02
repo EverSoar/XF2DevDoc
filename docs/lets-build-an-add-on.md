@@ -650,7 +650,7 @@ $viewParams = [
 						</div>
 					</div>
 					<div class="message-userContent lbContainer js-lbContainer" data-lb-id="post-{$post.post_id}" data-lb-caption-desc="{{ $post.User ? $post.User.username : $post.username }} &middot; {{ date_time($post.post_date) }}">
-                        		    <blockquote class="message-body">{{ bb_code($post.message, 'post', $post.User, { 'attachments': $post.attach_count ? $post.Attachments : [], 'viewAttachments': $thread.canViewAttachments() }) }}</blockquote>
+                        		    <blockquote class="message-body">{{ bb_code($post.message, 'post', $post.User, { 'attachments': $post.attach_count ? $post.Attachments : [], 'viewAttachments': $thread.canViewAttachments()}) }}</blockquote>
 					</div>
 				</div>
 			</div>
