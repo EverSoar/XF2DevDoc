@@ -1,0 +1,40 @@
+site_name: XenForo 2.0<br>開發人員說明文件
+title: XenForo 2.0 開發人員說明文件
+site_description: XenForo 2.0 開發人員說明文件。
+site_author: XenForo Ltd.
+
+theme: 
+  name: readthedocs
+  custom_dir: 'xf2_theme/'
+extra_css: [extra.css] 
+
+nav:
+# 概述
+- 入門須知: index.md
+# 網站管理員(或一般)
+- 模板語法: template-syntax.md
+- REST API: rest-api.md
+# 開發人員
+- 附加元件架構: add-on-structure.md
+- 開發工具: development-tools.md
+- 通用概念: general-concepts.md
+- 路由基礎知識: routing-basics.md
+- 控制器基礎知識: controller-basics.md
+- 資料實體、查找器、儲存庫: entities-finders-repositories.md
+- 準則: criteria.md
+- 管理 Schema: managing-the-schema.md
+- 創建一個附加組件: lets-build-an-add-on.md
+# 設計師
+- 設計樣式: designing-styles.md
+# 附錄
+- 附錄：Scotch Box: scotchbox.md
+
+repo_url: https://github.com/EverSoar/XF2-Doc/
+edit_uri: edit/master/docs/
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: True
+      
+copyright: <a href="https://xenforo.com/" target="_blank">XenForo 開發者說明文件&trade; &copy; 2017-2018 XenForo Ltd.</a>

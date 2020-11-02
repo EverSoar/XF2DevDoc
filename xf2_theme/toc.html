@@ -1,0 +1,26 @@
+
+{%- for toc_item in toc_item.children %}
+    <li class="toctree-l{{ navlevel }}">
+    	<a href="{{ toc_item.url }}">
+    		<font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">{{ toc_item.title }}</font>
+            </font>
+        </a>
+    </li>
+    {%- set navlevel = navlevel + 1 %}
+    {%- if navlevel <= config.theme.navigation_depth and toc_item.children %}
+    <ul>
+        {%- for toc_item in toc_item.children %}
+        <li>
+	    	<a class="toctree-l{{ navlevel }}" href="{{ toc_item.url }}">
+	    		<font style="vertical-align: inherit;">
+	                <font style="vertical-align: inherit;">{{ toc_item.title }}</font>
+	            </font>
+	        </a>
+    	</li>
+    	{%- endfor %}
+    </ul>
+    {%- endif %}
+    {%- set navlevel = navlevel - 1 %}
+    
+{%- endfor %}
